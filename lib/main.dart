@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       scrollBehavior: MyCustomScrollBehavior(),
       theme: ThemeData(
-        brightness: Brightness.dark,
-        canvasColor: MyTheme.backgroundColor,
+        useMaterial3: true,
+        colorScheme: ColorScheme.light(),
       ),
       builder: (context, child) {
         child = InteractionUtil.builder()(context, child);
