@@ -32,7 +32,7 @@ class MainPage extends StatelessWidget {
                   RowSeparated<MyMenu>(
                     mainAxisSize: MainAxisSize.min,
                     items: menuList,
-                    builder: (e) => Text(e.label, style: MyFonts.gmarketSans.medium(textStyle: TextStyle(fontSize: 19))),
+                    builder: (e) => Text(e.label, style: MyFonts.gmarketSans.medium(textStyle: TextStyle(fontSize: 20))),
                     separatorWidget: SizedBox(width: 45),
                   )
                 ],
