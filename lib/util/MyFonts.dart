@@ -14,5 +14,11 @@ class FontType {
 }
 
 class GmarketSans extends FontType {
+  TextStyle light({TextStyle? textStyle}) =>
+      (textStyle ?? const TextStyle()).copyWith(fontFamily: name, fontWeight: FontWeight.w100);
+  TextStyle medium({TextStyle? textStyle}) =>
+      (textStyle ?? const TextStyle()).copyWith(fontFamily: name, fontWeight: FontWeight.w500);
+  TextStyle bold({TextStyle? textStyle}) =>
+      (textStyle ?? const TextStyle()).copyWith(fontFamily: name, fontWeight: FontWeight.w900);
   const GmarketSans() : super("GmarketSans");
 }

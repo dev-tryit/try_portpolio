@@ -27,12 +27,12 @@ class MainPage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("TryIt."),
+                  Text("TryIt.", style: MyFonts.gmarketSans.bold()),
                   Spacer(),
                   RowSeparated<MyMenu>(
                     mainAxisSize: MainAxisSize.min,
                     items: menuList,
-                    builder: (e) => Text(e.label),
+                    builder: (e) => Text(e.label, style: MyFonts.gmarketSans.medium(textStyle: TextStyle(fontSize: 19))),
                     separatorWidget: SizedBox(width: 45),
                   )
                 ],

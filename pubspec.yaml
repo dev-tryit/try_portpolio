@@ -121,11 +121,11 @@ flutter:
   fonts:
    - family: GmarketSans
      fonts:
-       - asset: fonts/GmarketSansTTFLight.ttf
+       - asset: fonts/GmarketSansLight.otf
          weight: 100
-       - asset: fonts/GmarketSansTTFMedium.ttf
+       - asset: fonts/GmarketSansMedium.otf
          weight: 500
-       - asset: fonts/GmarketSansTTFBold.ttf
+       - asset: fonts/GmarketSansBold.otf
          weight: 900
   #
   # For details regarding fonts from package dependencies,
