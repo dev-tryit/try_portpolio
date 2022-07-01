@@ -150,7 +150,7 @@ class MyComponents {
                           onTap: onTrailingTap,
                           child: Text(
                             trailing,
-                            style: MyFonts.coiny(
+                            style: TextStyle(
                               // color: trailingColor ?? MyTheme.subColor,
                               fontSize: 12,
                               fontWeight: FontWeight.bold,

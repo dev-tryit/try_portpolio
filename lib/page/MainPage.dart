@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:try_portpolio/_common/widget/RowSeparated.dart';
 import 'package:try_portpolio/model/MyMenu.dart';
 import 'package:try_portpolio/util/MyComponents.dart';
+import 'package:try_portpolio/util/MyFonts.dart';
 import 'package:try_portpolio/util/MyImage.dart';
 
 class MainPage extends StatelessWidget {
@@ -26,7 +27,7 @@ class MainPage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("TryIt."),
+                  Text("TryIt.", style: MyFonts.gmarketSans()),
                   Spacer(),
                   RowSeparated<MyMenu>(
                     mainAxisSize: MainAxisSize.min,
