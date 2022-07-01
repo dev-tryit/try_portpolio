@@ -27,7 +27,7 @@ class MainPage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("TryIt.", style: MyFonts.gmarketSans()),
+                  Text("TryIt."),
                   Spacer(),
                   RowSeparated<MyMenu>(
                     mainAxisSize: MainAxisSize.min,

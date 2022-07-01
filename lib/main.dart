@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.light(),
+        fontFamily: MyFonts.gmarketSans.name
       ),
       builder: (context, child) {
         child = InteractionUtil.builder()(context, child);
