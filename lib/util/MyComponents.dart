@@ -11,6 +11,30 @@ class MyComponents {
 
   static DateTime? _lastClickDateTime;
 
+  static Widget fixedSliverAppBar({required double appBarSize, required Widget child}){
+    return SliverAppBar(
+      automaticallyImplyLeading: false, //자동으로 생기는 뒤로가기 버튼 없애기
+      pinned: true, // 축소시 상단에 AppBar가 고정되는지 설정
+      shadowColor: Colors.transparent,
+      toolbarHeight: appBarSize, //헤더의 기본 높이
+      expandedHeight: appBarSize, // 헤더의 최대 높이
+      collapsedHeight: appBarSize, //헤더의 최소 높이
+      titleSpacing: 0, //왼쪽,오른쪽 너비
+      title: Container(
+        height: appBarSize,
+        child: child,
+      ), //SliverAppBar 맨 위에 붙어있음.
+      // flexibleSpace: FlexibleSpaceBar( //FlexibleSpaceBar는 SliverAppBar 맨 아래에 붙어있음, 스크롤하면, 크기가 줄어들음
+      //   titlePadding: EdgeInsets.zero,
+      //   title: Container(color:Colors.red,height:200,child: Text('Sliver')),
+      //   // background: Image.asset(
+      //   //   'assets/IMG_9245.jpeg',
+      //   //   fit: BoxFit.cover,
+      //   // ),
+      // ),
+    );
+
+  }
   static Widget scaffold(
       {required Widget body,
       Widget? bottomSheet,
