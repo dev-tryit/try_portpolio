@@ -8,6 +8,7 @@ import '_common/util/InteractionUtil.dart';
 import 'page/MainPage.dart';
 import 'util/MyFonts.dart';
 import 'util/MyStoreUtil.dart';
+import 'util/MyTexts.dart';
 
 Future<void> main() async {
   ErrorUtil.catchError(() async {
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: ColorScheme.light(),
-        fontFamily: MyFonts.gmarketSans.name
+        fontFamily: MyTexts.gmarketSans.name
       ),
       builder: (context, child) {
         child = InteractionUtil.builder()(context, child);

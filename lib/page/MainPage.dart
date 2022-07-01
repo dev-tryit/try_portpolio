@@ -1,9 +1,11 @@
+import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
 import 'package:try_portpolio/_common/widget/RowSeparated.dart';
 import 'package:try_portpolio/model/MyMenu.dart';
 import 'package:try_portpolio/util/MyComponents.dart';
-import 'package:try_portpolio/util/MyFonts.dart';
 import 'package:try_portpolio/util/MyImage.dart';
+
+import '../util/MyTexts.dart';
 
 class MainPage extends StatelessWidget {
   List<MyMenu> menuList = [
@@ -27,12 +29,16 @@ class MainPage extends StatelessWidget {
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  Text("TryIt.", style: MyFonts.gmarketSans.bold()),
+                  MyTexts.gmarketSans.bold("TryIt."),
                   Spacer(),
                   RowSeparated<MyMenu>(
                     mainAxisSize: MainAxisSize.min,
                     items: menuList,
-                    builder: (e) => Text(e.label, style: MyFonts.gmarketSans.medium(textStyle: TextStyle(fontSize: 20))),
+                    builder: (e) => MyTexts.gmarketSans.medium(
+                      e.label,
+                      style: TextStyle(fontSize: 20.15),
+                      strokeWidth: 0.6,
+                    ),
                     separatorWidget: SizedBox(width: 45),
                   )
                 ],
