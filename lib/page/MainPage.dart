@@ -30,16 +30,16 @@ class MainPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   MyTexts.gmarketSans.bold("TryIt."),
-                  Spacer(),
+                  const Spacer(),
                   RowSeparated<MyMenu>(
                     mainAxisSize: MainAxisSize.min,
                     items: menuList,
                     builder: (e) => MyTexts.gmarketSans.medium(
                       e.label,
-                      style: TextStyle(fontSize: 20.15),
+                      style: const TextStyle(fontSize: 20.15),
                       strokeWidth: 0.6,
                     ),
-                    separatorWidget: SizedBox(width: 45),
+                    separatorWidget: const SizedBox(width: 45),
                   )
                 ],
               ),
@@ -47,16 +47,20 @@ class MainPage extends StatelessWidget {
             SliverList(
               delegate: SliverChildListDelegate(
                 [
+                  SizedBox(height: 140),
                   Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Expanded(
                         flex: 55,
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("안녕하세요"),
-                            Text("프리랜서 개발자"),
-                            Text("김동현입니다"),
-                            Text(
+                            MyTexts.gmarketSans.text("안녕하세요", style: TextStyle(fontSize: 31)),
+                            SizedBox(height: 28),
+                            MyTexts.gmarketSans.text("프리랜서 개발자", style: TextStyle(fontSize: 32)),
+                            MyTexts.gmarketSans.medium("김동현입니다", style: TextStyle(fontSize: 78, fontWeight: FontWeight.w700)),
+                            MyTexts.gmarketSans.text(
                                 "생산성 있는 개발과 유지보수하기 좋은 코드를 지향합니다.\n2022년 현재, Dart-Flutter 기술 스택을 활용한 프리랜서로 활동하고 있습니다.\n주요 이력으로는, 네오위즈의 모바일플랫폼개발팀에서 Java-SpringBoot을 통한 서버 관리 업무, Java-Android와 C#-Unity를 통한 SDK 개발 및 유지보수 업무를 진행하였습니다."),
                           ],
                         ),
