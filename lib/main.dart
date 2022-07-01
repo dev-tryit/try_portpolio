@@ -1,6 +1,14 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 
 import 'MySetting.dart';
+import '_common/config/MyCustomScrollBehavior.dart';
+import '_common/util/ErrorUtil.dart';
+import '_common/util/InteractionUtil.dart';
+import 'page/MainPage.dart';
+import 'util/MyFonts.dart';
+import 'util/MyStoreUtil.dart';
+import 'util/MyTheme.dart';
 
 Future<void> main() async {
   ErrorUtil.catchError(() async {
@@ -22,34 +30,8 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         brightness: Brightness.dark,
         canvasColor: MyTheme.backgroundColor,
-        // primaryColor: Colors.lightBlue[800],
-        // Define the default font family.
-        // fontFamily: 'Georgia',
-
-        // Define the default `TextTheme`. Use this to specify the default
-        // text styling for headlines, titles, bodies of text, and more.
-        // textTheme: const TextTheme(d
-        //   headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
-        //   headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
-        //   bodyText2: TextStyle(fontSize: 14.0, fontFamily: 'Hind'),
-        // ),
       ),
       builder: (context, child) {
-        // // 1. FittedBox는 부모와 크기가 같게 만드는 성질이 있다.
-        // // 2. FittedBox + SizedBox를 사용하면,
-        // // Sizedbox를 통해 비율이 결정되고,
-        // // FittedBox를 통해 크기를 부모에 맞추려고 하여, 축적(확대,축소)가 변경된다.
-        // child = FittedBox(
-        //   alignment: Alignment.center,
-        //   child: Container(
-        //     width: width,
-        //     height: height,
-        //     decoration: BoxDecoration(
-        //       border: Border.all(color: Colors.black, width: 1),
-        //     ),
-        //     child: child!,
-        //   ),
-        // );
         child = InteractionUtil.builder()(context, child);
         return child;
       },
