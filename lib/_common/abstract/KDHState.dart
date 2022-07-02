@@ -19,7 +19,7 @@ abstract class KDHState<TargetWidget extends StatefulWidget>
     // LogUtil.debug("super.initState");
     super.initState();
 
-    WidgetsBinding.instance?.addPostFrameCallback((_) async {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
       // LogUtil.debug("super.prepareRebuild");
       if (buildedWidgets.isNotEmpty) {
         _getSizeOfWidgetList();
@@ -78,7 +78,7 @@ abstract class KDHState<TargetWidget extends StatefulWidget>
   void rebuild({Future<void> Function()? afterBuild}) {
     if (afterBuild != null) {
       //build 때, afterBuild 불리도록 요청.
-      WidgetsBinding.instance?.addPostFrameCallback((_) => afterBuild());
+      WidgetsBinding.instance.addPostFrameCallback((_) => afterBuild());
     }
 
     //Flutter는 중간에 state를 제거해놓기도 한다. 추후에 build로 다시 생성하지만..

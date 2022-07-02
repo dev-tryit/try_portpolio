@@ -2,7 +2,6 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import '../MySetting.dart';
 import '../_common/util/AnimationUtil.dart';
-import '../util/MyFonts.dart';
 import '../util/MyTheme.dart';
 import 'package:material_tag_editor/tag_editor.dart';
 
@@ -11,7 +10,7 @@ class MyComponents {
 
   static DateTime? _lastClickDateTime;
 
-  static Widget fixedSliverAppBar({required double appBarSize, required Widget child}){
+  static Widget fixedSliverAppBar({required double appBarSize, required Widget child, EdgeInsetsGeometry? padding}){
     return SliverAppBar(
       automaticallyImplyLeading: false, //자동으로 생기는 뒤로가기 버튼 없애기
       pinned: true, // 축소시 상단에 AppBar가 고정되는지 설정
@@ -22,6 +21,7 @@ class MyComponents {
       titleSpacing: 0, //왼쪽,오른쪽 너비
       title: Container(
         height: appBarSize,
+        padding: padding,
         child: child,
       ), //SliverAppBar 맨 위에 붙어있음.
       // flexibleSpace: FlexibleSpaceBar( //FlexibleSpaceBar는 SliverAppBar 맨 아래에 붙어있음, 스크롤하면, 크기가 줄어들음

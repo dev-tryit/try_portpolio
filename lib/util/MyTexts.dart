@@ -33,17 +33,17 @@ class FontType {
 class GmarketSans extends FontType {
   Widget light(String data, {TextStyle? style, double? strokeWidth}) =>
       text(data,
-          style: style ?? _textStyle(style: TextStyle(fontWeight: FontWeight.w100)),
+          style: (style ?? _textStyle()).copyWith(fontWeight: FontWeight.w100),
           strokeWidth: strokeWidth);
 
   Widget medium(String data, {TextStyle? style, double? strokeWidth}) =>
       text(data,
-          style: style ?? _textStyle(style: TextStyle(fontWeight: FontWeight.w500)),
+          style: (style ?? _textStyle()).copyWith(fontWeight: FontWeight.w500),
           strokeWidth: strokeWidth);
 
   Widget bold(String data, {TextStyle? style, double? strokeWidth}) =>
       text(data,
-          style: style ?? _textStyle(style: TextStyle(fontWeight: FontWeight.w900)),
+          style: (style ?? _textStyle()).copyWith(fontWeight: FontWeight.w900),
           strokeWidth: strokeWidth);
 
   const GmarketSans() : super("GmarketSans");

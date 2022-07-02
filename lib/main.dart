@@ -6,7 +6,7 @@ import '_common/config/MyCustomScrollBehavior.dart';
 import '_common/util/ErrorUtil.dart';
 import '_common/util/InteractionUtil.dart';
 import 'page/MainPage.dart';
-import 'util/MyFonts.dart';
+import 'util/MyEmoji.dart';
 import 'util/MyStoreUtil.dart';
 import 'util/MyTexts.dart';
 
