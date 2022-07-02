@@ -31,14 +31,16 @@ class MainPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 const Spacer(flex: 9),
-                MyTexts.gmarketSans.bold("TryIt."),
-                const Spacer(flex: 100-(7+9)),
+                MyTexts.gmarketSans.text("TryIt.",
+                    style: const TextStyle(fontWeight: FontWeight.w900)),
+                const Spacer(flex: 100 - (7 + 9)),
                 RowSeparated<MyMenu>(
                   mainAxisSize: MainAxisSize.min,
                   items: menuList,
-                  builder: (e) => MyTexts.gmarketSans.medium(
+                  builder: (e) => MyTexts.gmarketSans.text(
                     e.label,
-                    style: const TextStyle(fontSize: 20.15),
+                    style: const TextStyle(
+                        fontSize: 20.15, fontWeight: FontWeight.w500),
                     strokeWidth: 0.6,
                   ),
                   separatorWidget: const SizedBox(width: 48),
@@ -56,13 +58,13 @@ class MainPage extends StatelessWidget {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Spacer(flex: 7),
+                      const Spacer(flex: 7),
                       Expanded(
                         flex: 20,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            SizedBox(height: 40),
+                            const SizedBox(height: 40),
                             Stack(
                               clipBehavior: Clip.none,
                               children: [
@@ -73,7 +75,7 @@ class MainPage extends StatelessWidget {
                                       color: MyTheme.highlightOrangeColor,
                                     ),
                                     strokeWidth: 0.5),
-                                Positioned(
+                                const Positioned(
                                   left: -33,
                                   top: -33,
                                   child: Text(
@@ -97,26 +99,34 @@ class MainPage extends StatelessWidget {
                             MyTexts.gmarketSans.text(
                               "생산성 있는 개발과 유지보수하기 좋은 코드를 지향합니다.\n\n"
                               "${DateTime.now().year}년 현재, Dart-Flutter 기술 스택을 활용하여 프리랜서로 활동하고 있습니다. 프리랜서 이전에는, 네오위즈에서 인증, 결제, 친구, 메시지 기능을 위한 서버 및 SDK의 개발 및 유지보수 업무를 진행하였습니다.",
-                              style: TextStyle(
+                              style: const TextStyle(
                                 fontSize: 18,
                                 color: MyTheme.normalTextGreyColor,
                               ),
                             ),
                             const SizedBox(height: 80),
-                            MovingPageButton("포트폴리오 보러가기", onPressed:(){}),
+                            MovingPageButton("포트폴리오 보러가기", onPressed: () {}),
                           ],
                         ),
                       ),
-                      Spacer(flex: 10),
-                      Image(
+                      const Spacer(flex: 10),
+                      const Image(
                         image: MyImage.profileWithBackground,
                         fit: BoxFit.fill,
                         height: 630,
                       ),
-                      Spacer(flex: 7),
+                      const Spacer(flex: 7),
                     ],
                   ),
-                )
+                ),
+                const SizedBox(height: 200),
+                SizedBox(
+                    width: double.infinity,
+                    child: MyTexts.gmarketSans.text("타임라인",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontSize: 51, fontWeight: FontWeight.w800))),
+                const SizedBox(height: 100),
               ],
             ),
           ),

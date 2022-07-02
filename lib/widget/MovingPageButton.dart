@@ -27,9 +27,13 @@ class MovingPageButton extends StatelessWidget {
           child: Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              MyTexts.gmarketSans.medium(data,
+              MyTexts.gmarketSans.text(data,
                   style: TextStyle(
-                      fontSize: 19, color: MyTheme.invertedNormalTextColor, decoration: isHovered?TextDecoration.underline:null, decorationThickness: 2),
+                      fontSize: 19,
+                      color: MyTheme.invertedNormalTextColor,
+                      fontWeight: FontWeight.w500,
+                      decoration: isHovered ? TextDecoration.underline : null,
+                      decorationThickness: 2),
                   strokeWidth: 0.7),
               const SizedBox(width: 8),
               MyImage.movePageIcon,

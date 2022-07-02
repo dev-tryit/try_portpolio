@@ -18,6 +18,8 @@ class MyComponents {
       toolbarHeight: appBarSize, //헤더의 기본 높이
       expandedHeight: appBarSize, // 헤더의 최대 높이
       collapsedHeight: appBarSize, //헤더의 최소 높이
+      backgroundColor: MyTheme.backgroundColor,
+      surfaceTintColor: MyTheme.backgroundColor,
       titleSpacing: 0, //왼쪽,오른쪽 너비
       title: Container(
         height: appBarSize,

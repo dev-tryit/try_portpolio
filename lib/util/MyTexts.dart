@@ -8,12 +8,10 @@ class MyTexts {
 class FontType {
   final String name;
 
-  TextStyle _textStyle({TextStyle? style}) =>
-      (style ?? const TextStyle()).copyWith(fontFamily: name);
-
-  Widget text(String data, {TextStyle? style, double? strokeWidth}) {
+  Widget text(String data, {TextStyle? style, double? strokeWidth, TextAlign? textAlign}) {
     Widget child = Text(
       data,
+      textAlign: textAlign,
       style: (style ?? const TextStyle()).copyWith(fontFamily: name),
     );
 
@@ -32,20 +30,5 @@ class FontType {
 }
 
 class GmarketSans extends FontType {
-  Widget light(String data, {TextStyle? style, double? strokeWidth}) =>
-      text(data,
-          style: (style ?? _textStyle()).copyWith(fontWeight: FontWeight.w100),
-          strokeWidth: strokeWidth);
-
-  Widget medium(String data, {TextStyle? style, double? strokeWidth}) =>
-      text(data,
-          style: (style ?? _textStyle()).copyWith(fontWeight: FontWeight.w500),
-          strokeWidth: strokeWidth);
-
-  Widget bold(String data, {TextStyle? style, double? strokeWidth}) =>
-      text(data,
-          style: (style ?? _textStyle()).copyWith(fontWeight: FontWeight.w900),
-          strokeWidth: strokeWidth);
-
   const GmarketSans() : super("GmarketSans");
 }
