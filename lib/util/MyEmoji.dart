@@ -1,9 +1,7 @@
 
 import 'package:emojis/emoji.dart';
+import 'package:emojis/emojis.dart';
 
 class MyEmoji {
-
-  static Emoji? getHi(){
-    return Emoji.byName('hi');
-  }
+  static const String wavingHand= Emojis.wavingHand;
 }

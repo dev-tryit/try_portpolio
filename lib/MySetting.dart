@@ -13,7 +13,7 @@ class MySetting {
   static const int timeZoneOffset = 9;
 
   // App & Web
-  static const String webTitle = "LooksRare - NFT Marketplace | LooksRare";
+  static const String webTitle = "개발자 김동현 포트폴리오";
 
   // 중복 클릭 방지 시간
   static int milliSecondsForPreventingMultipleClicks = 300;

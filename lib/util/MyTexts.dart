@@ -20,6 +20,7 @@ class FontType {
     if (strokeWidth != null) {
       child = BorderedText(
         strokeWidth: strokeWidth,
+        strokeColor: (child as Text).style?.color??Colors.black,
         child: child as Text,
       );
     }

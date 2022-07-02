@@ -54,21 +54,30 @@ class MainPage extends StatelessWidget {
                   child: Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
+                      Spacer(flex: 7),
                       Expanded(
-                        flex: 55,
+                        flex: 50,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Stack(
+                              clipBehavior: Clip.none,
                               children: [
-                                // Text(MyEmoji.getHi()?.char??""),
                                 MyTexts.gmarketSans.text("안녕하세요",
                                     style: const TextStyle(
                                       fontSize: 31,
                                       fontWeight: FontWeight.w500,
                                       color: MyTheme.highlightOrangeColor,
                                     ),
-                                    strokeWidth: 0.5)
+                                    strokeWidth: 0.5),
+                                Positioned(
+                                  left: -33,
+                                  top: -33,
+                                  child: Text(
+                                    MyEmoji.wavingHand,
+                                    style: TextStyle(fontSize: 32),
+                                  ),
+                                ),
                               ],
                             ),
                             const SizedBox(height: 28),
@@ -81,18 +90,25 @@ class MainPage extends StatelessWidget {
                             MyTexts.gmarketSans.text("김동현입니다",
                                 style: const TextStyle(
                                     fontSize: 78, fontWeight: FontWeight.w700)),
+                            const SizedBox(height: 28),
                             MyTexts.gmarketSans.text(
-                                "생산성 있는 개발과 유지보수하기 좋은 코드를 지향합니다.\n2022년 현재, Dart-Flutter 기술 스택을 활용한 프리랜서로 활동하고 있습니다.\n주요 이력으로는, 네오위즈의 모바일플랫폼개발팀에서 Java-SpringBoot을 통한 서버 관리 업무, Java-Android와 C#-Unity를 통한 SDK 개발 및 유지보수 업무를 진행하였습니다."),
+                              "생산성 있는 개발과 유지보수하기 좋은 코드를 지향합니다.\n\n"
+                              "${DateTime.now().year}년 현재, Dart-Flutter 기술 스택을 활용하여 프리랜서로 활동하고 있습니다.\n"
+                              "네오위즈에서 인증,결제,친구,메시지의 서버 및 SDK의 개발 및 유지보수 업무를 맡았습니다.",
+                              style: TextStyle(fontSize: 18),
+                            ),
                           ],
                         ),
                       ),
+                      Spacer(flex: 10),
                       Expanded(
-                        flex: 45,
+                        flex: 30,
                         child: Image(
-                          image: MyImage.randomImage(width: 250, height: 250),
+                          image: MyImage.constRandomImage,
                           fit: BoxFit.fill,
                         ),
-                      )
+                      ),
+                      Spacer(flex: 7),
                     ],
                   ),
                 )
