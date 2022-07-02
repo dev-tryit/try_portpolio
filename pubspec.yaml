@@ -81,6 +81,8 @@ dependencies:
       url: https://github.com/jannisnikoy/marquee.git
       ref: feature/flutter3 # branch name
 
+  firebase_core: ^1.19.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
