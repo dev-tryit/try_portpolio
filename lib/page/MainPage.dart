@@ -8,6 +8,7 @@ import 'package:try_portpolio/util/MyImage.dart';
 import 'package:try_portpolio/util/MyTheme.dart';
 
 import '../util/MyTexts.dart';
+import '../widget/MovingPageButton.dart';
 
 class MainPage extends StatelessWidget {
   List<MyMenu> menuList = [
@@ -94,9 +95,14 @@ class MainPage extends StatelessWidget {
                             MyTexts.gmarketSans.text(
                               "생산성 있는 개발과 유지보수하기 좋은 코드를 지향합니다.\n\n"
                               "${DateTime.now().year}년 현재, Dart-Flutter 기술 스택을 활용하여 프리랜서로 활동하고 있습니다.\n"
-                              "네오위즈에서 인증,결제,친구,메시지의 서버 및 SDK의 개발 및 유지보수 업무를 맡았습니다.",
-                              style: TextStyle(fontSize: 18),
+                              "주요 이력으로는, 네오위즈에서 인증,결제,친구,메시지의 서버 및 SDK의 개발 및 유지보수 업무가 있습니다.",
+                              style: TextStyle(
+                                fontSize: 18,
+                                color: MyTheme.normalTextGreyColor,
+                              ),
                             ),
+                            const SizedBox(height: 80),
+                            MovingPageButton("포트폴리오 보러가기", onPressed:(){}),
                           ],
                         ),
                       ),
