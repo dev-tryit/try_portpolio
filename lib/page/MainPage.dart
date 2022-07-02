@@ -110,7 +110,7 @@ class MainPage extends StatelessWidget {
                       Expanded(
                         flex: 30,
                         child: Image(
-                          image: MyImage.constRandomImage,
+                          image: MyImage.profileWithBackground,
                           fit: BoxFit.fill,
                         ),
                       ),
