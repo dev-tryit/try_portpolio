@@ -26,13 +26,13 @@ class MainPage extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           MyComponents.fixedSliverAppBar(
-            appBarSize: 90,
-            padding: const EdgeInsets.only(left: 15, right: 15),
+            appBarSize: 85,
             child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                const Spacer(flex: 9),
                 MyTexts.gmarketSans.bold("TryIt."),
-                const Spacer(),
+                const Spacer(flex: 100-(7+9)),
                 RowSeparated<MyMenu>(
                   mainAxisSize: MainAxisSize.min,
                   items: menuList,
@@ -41,15 +41,16 @@ class MainPage extends StatelessWidget {
                     style: const TextStyle(fontSize: 20.15),
                     strokeWidth: 0.6,
                   ),
-                  separatorWidget: const SizedBox(width: 45),
-                )
+                  separatorWidget: const SizedBox(width: 48),
+                ),
+                const Spacer(flex: 9),
               ],
             ),
           ),
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                const SizedBox(height: 140),
+                const SizedBox(height: 60),
                 Padding(
                   padding: const EdgeInsets.only(left: 5, right: 5),
                   child: Row(
@@ -57,10 +58,11 @@ class MainPage extends StatelessWidget {
                     children: [
                       Spacer(flex: 7),
                       Expanded(
-                        flex: 50,
+                        flex: 20,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
+                            SizedBox(height: 40),
                             Stack(
                               clipBehavior: Clip.none,
                               children: [
@@ -94,8 +96,7 @@ class MainPage extends StatelessWidget {
                             const SizedBox(height: 28),
                             MyTexts.gmarketSans.text(
                               "생산성 있는 개발과 유지보수하기 좋은 코드를 지향합니다.\n\n"
-                              "${DateTime.now().year}년 현재, Dart-Flutter 기술 스택을 활용하여 프리랜서로 활동하고 있습니다.\n"
-                              "주요 이력으로는, 네오위즈에서 인증,결제,친구,메시지의 서버 및 SDK의 개발 및 유지보수 업무가 있습니다.",
+                              "${DateTime.now().year}년 현재, Dart-Flutter 기술 스택을 활용하여 프리랜서로 활동하고 있습니다. 프리랜서 이전에는, 네오위즈에서 인증, 결제, 친구, 메시지 기능을 위한 서버 및 SDK의 개발 및 유지보수 업무를 진행하였습니다.",
                               style: TextStyle(
                                 fontSize: 18,
                                 color: MyTheme.normalTextGreyColor,
@@ -107,12 +108,10 @@ class MainPage extends StatelessWidget {
                         ),
                       ),
                       Spacer(flex: 10),
-                      Expanded(
-                        flex: 30,
-                        child: Image(
-                          image: MyImage.profileWithBackground,
-                          fit: BoxFit.fill,
-                        ),
+                      Image(
+                        image: MyImage.profileWithBackground,
+                        fit: BoxFit.fill,
+                        height: 630,
                       ),
                       Spacer(flex: 7),
                     ],
