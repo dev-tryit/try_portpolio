@@ -82,6 +82,7 @@ dependencies:
       ref: feature/flutter3 # branch name
 
   firebase_core: ^1.19.1
+  timelines: ^0.1.0
 
 dev_dependencies:
   flutter_test:

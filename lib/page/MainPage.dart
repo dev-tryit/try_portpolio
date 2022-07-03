@@ -1,5 +1,6 @@
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
+import 'package:timelines/timelines.dart';
 import 'package:try_portpolio/_common/widget/RowSeparated.dart';
 import 'package:try_portpolio/model/MyMenu.dart';
 import 'package:try_portpolio/util/MyComponents.dart';
@@ -17,6 +18,8 @@ class MainPage extends StatelessWidget {
     MyMenu("기술스택"),
     MyMenu("연락처"),
   ];
+
+  List timelineElementList = List.generate(5, (index) => index)..add(null);
 
   MainPage({Key? key}) : super(key: key);
 
@@ -127,6 +130,37 @@ class MainPage extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 51, fontWeight: FontWeight.w800))),
                 const SizedBox(height: 100),
+                Timeline.tileBuilder(
+                  theme: TimelineThemeData(
+                    color: MyTheme.highlightPuppleColor,
+                    indicatorPosition: 0,
+                    indicatorTheme: IndicatorThemeData(size: 33),
+                    connectorTheme: ConnectorThemeData(thickness: 8),
+                  ),
+                  builder: TimelineTileBuilder.connected(
+                    itemCount: timelineElementList.length,
+                    contentsAlign: ContentsAlign.alternating,
+                    contentsBuilder: (context, index) => Padding(
+                      padding: const EdgeInsets.all(24.0),
+                      child: Text((timelineElementList.length - 1 > index)
+                          ? 'Timeline Event $index'
+                          : ''),
+                    ),
+                    oppositeContentsBuilder: (context, index) => Padding(
+                      padding: const EdgeInsets.all(24.0),
+                      child: Text((timelineElementList.length - 1 > index)
+                          ? 'Opposite Timeline Event $index'
+                          : ''),
+                    ),
+                    indicatorBuilder: (context, index) =>
+                        OutlinedDotIndicator(borderWidth: 8),
+                    connectorBuilder: (context, index, type) => Container(
+                      height: 550,
+                      child: SolidLineConnector(),
+                    ),
+                  ),
+                  shrinkWrap: true,
+                ),
               ],
             ),
           ),

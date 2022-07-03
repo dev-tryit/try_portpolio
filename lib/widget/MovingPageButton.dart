@@ -21,7 +21,7 @@ class MovingPageButton extends StatelessWidget {
         builder: (isHovered) => ElevatedButton(
           onPressed: onPressed,
           style: ElevatedButton.styleFrom(
-              primary: MyTheme.movingPageButtonColor,
+              primary: MyTheme.highlightPuppleColor,
               padding: const EdgeInsets.only(
                   top: 22, bottom: 22, left: 30, right: 30)),
           child: Row(

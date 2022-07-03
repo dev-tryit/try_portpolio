@@ -10,15 +10,15 @@ import 'util/MyEmoji.dart';
 import 'util/MyStoreUtil.dart';
 import 'util/MyTexts.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'firebase_options.dart';
+// import 'firebase_options.dart';
 
 Future<void> main() async {
   ErrorUtil.catchError(() async {
     await MyStoreUtil.init();
     // await AuthUtil.me.init();
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
+    // await Firebase.initializeApp(
+    //   options: DefaultFirebaseOptions.currentPlatform,
+    // );
 
     runApp(MyApp());
   });
